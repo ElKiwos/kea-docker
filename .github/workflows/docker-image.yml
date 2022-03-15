@@ -40,3 +40,13 @@ jobs:
           push: true
           tags: elkiwi/kea-server:latest
           platforms: linux/arm64,linux/amd64
+          file: "kea-server/Dockerfile"
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: elkiwi/kea-ddns:latest
+          platforms: linux/arm64,linux/amd64
+          file: "kea-ddns/Dockerfile"
+
